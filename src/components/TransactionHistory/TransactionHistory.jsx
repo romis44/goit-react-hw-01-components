@@ -1,6 +1,7 @@
-export default function TransactionHistory() {
+import { TransactionData } from './TransactionHistory.styled';
+export default function TransactionHistory({ items }) {
   return (
-    <table class="transaction-history">
+    <TransactionData>
       <thead>
         <tr>
           <th>Type</th>
@@ -10,17 +11,14 @@ export default function TransactionHistory() {
       </thead>
 
       <tbody>
-        <tr>
-          <td>Invoice</td>
-          <td>125</td>
-          <td>USD</td>
-        </tr>
-        <tr>
-          <td>Withdrawal</td>
-          <td>85</td>
-          <td>USD</td>
-        </tr>
+        {items.map(({ id, type, amount, currency }) => (
+          <tr key={id}>
+            <td>{type}</td>
+            <td>{amount}</td>
+            <td>{currency}</td>
+          </tr>
+        ))}
       </tbody>
-    </table>
+    </TransactionData>
   );
 }

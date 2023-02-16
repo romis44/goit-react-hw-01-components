@@ -1,31 +1,47 @@
-export default function Profile() {
-  return (
-    <div class="profile">
-      <div class="description">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/1077/1077012.png"
-          alt="User avatar"
-          class="avatar"
-        />
-        <p class="name">Petra Marica</p>
-        <p class="tag">@pmarica</p>
-        <p class="location">Salvador, Brasil</p>
-      </div>
+import {
+  UserProfile,
+  UserBox,
+  UserAvatar,
+  UserName,
+  UserTag,
+  UserLocation,
+  UserStats,
+  Label,
+  Quantity,
+} from './Profile.styled';
 
-      <ul class="stats">
+export default function Profile({
+  username,
+  tag,
+  location,
+  avatar,
+  followers,
+  views,
+  likes,
+}) {
+  return (
+    <UserProfile>
+      <UserBox>
+        <UserAvatar src={avatar} alt="User avatar" class="avatar" />
+        <UserName>{username}</UserName>
+        <UserTag>@{tag}</UserTag>
+        <UserLocation>{location}</UserLocation>
+      </UserBox>
+
+      <UserStats>
         <li>
-          <span class="label">Followers</span>
-          <span class="quantity">1000</span>
+          <Label>Followers</Label>
+          <Quantity>{followers}</Quantity>
         </li>
         <li>
-          <span class="label">Views</span>
-          <span class="quantity">2000</span>
+          <Label>Views</Label>
+          <Quantity>{views}</Quantity>
         </li>
         <li>
-          <span class="label">Likes</span>
-          <span class="quantity">3000</span>
+          <Label>Likes</Label>
+          <Quantity>{likes}</Quantity>
         </li>
-      </ul>
-    </div>
+      </UserStats>
+    </UserProfile>
   );
 }

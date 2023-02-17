@@ -14,7 +14,7 @@ export const TransactionData = styled.table`
 
   & tr:hover {
     background-color: yellow;
-    transition: background-color 500ms linear;
+    transition: background-color 400ms linear;
   }
 
   & th,

@@ -20,6 +20,6 @@ export const TransactionData = styled.table`
   & th,
   & td {
     padding: 10px 15px;
-    border: 1px solid #a39c47;
+    border: 1px solid rgb(85 131 30 / 30%);
   }
 `;

@@ -14,7 +14,6 @@ export const UserProfile = styled.div`
 
 export const UserBox = styled.div`
   width: 150px;
-  //   overflow: hidden;
 `;
 
 export const UserAvatar = styled.img`
@@ -47,7 +46,6 @@ export const UserStats = styled.ul`
   margin: 0;
 
   display: flex;
-  //   justify-content: space-evenly;
   align-items: center;
   gap: 15px;
   & li {

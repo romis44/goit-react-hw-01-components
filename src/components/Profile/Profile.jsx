@@ -23,7 +23,7 @@ export default function Profile({
   return (
     <UserProfile>
       <UserBox>
-        <UserAvatar src={avatar} alt="User avatar" class="avatar" />
+        <UserAvatar src={avatar} alt="User avatar" />
         <UserName>{username}</UserName>
         <UserTag>@{tag}</UserTag>
         <UserLocation>{location}</UserLocation>

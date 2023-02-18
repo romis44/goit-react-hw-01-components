@@ -11,7 +11,7 @@ import {
 export default function Statistics({ title, stats }) {
   return (
     <StatSection>
-      <StatTitle>{title}</StatTitle>
+      {title && <StatTitle>{title}</StatTitle>}
 
       <StatList>
         {stats.map(({ id, label, percentage }) => {
